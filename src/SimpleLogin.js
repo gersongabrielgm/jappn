@@ -1,13 +1,25 @@
 import React, { useState } from 'react';
 import { View, TextInput, Button, StyleSheet } from 'react-native';
 
-const SimpleLogin = ({ onLogin }) => {
+const SimpleLogin = ({ endpoint = 'https://example.com/api/login', onLogin }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = () => {
-    if (onLogin) {
-      onLogin({ username, password });
+  const handleLogin = async () => {
+    try {
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ username, password }),
+      });
+      const data = await response.json();
+      if (onLogin) {
+        onLogin(data);
+      }
+    } catch (error) {
+      console.error('Login request failed', error);
     }
   };
 

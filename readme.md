@@ -7,7 +7,10 @@ This repository contains a simple React Native component `SimpleLogin` that prov
 ```javascript
 import SimpleLogin from './src/SimpleLogin';
 
-<SimpleLogin onLogin={(credentials) => console.log(credentials)} />
+<SimpleLogin
+  endpoint="https://example.com/api/login"
+  onLogin={(response) => console.log(response)}
+/>
 ```
 
-The `onLogin` callback receives an object containing `username` and `password`.
+The component posts the `username` and `password` to the provided REST endpoint. The `onLogin` callback receives the parsed JSON response from the server.
