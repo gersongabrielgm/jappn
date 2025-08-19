@@ -1,0 +1,16 @@
+{
+  "name": "jappn",
+  "version": "0.5.1",
+  "description": "miniJapp",
+  "main": "watch.js",
+  "scripts": {
+  },
+  "author": "Jesus Laynes",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "chokidar": "^3.6.0"
+  }
+}

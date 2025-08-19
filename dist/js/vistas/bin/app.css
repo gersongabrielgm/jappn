@@ -1,0 +1,108 @@
+/*Modificaion de VAcording*/
+.jsx_VAcordion>div.sel{
+    border-left: 4px solid red;
+}
+
+
+/*imagen punto de venta*/
+.ShowProducto>div>div>img{
+    width:80%
+}
+
+
+/**info del documento pv*/
+#pv_board{
+    font-size:1rem;
+    width: 90%;
+    margin-left:5%
+}
+#pv_board>tr>th{
+    background-color: #f4f4f4;
+    padding-top:10px;
+    padding-bottom:5px;
+    padding-left:15px
+}
+#pv_board>tr>td{
+    padding-top:10px;
+    padding-left:15px
+}
+
+.mlink{
+    font-size: 0.8rem;
+    border-bottom: 1px dashed gray;
+    cursor: pointer;
+}
+
+.c80p{
+    width:80%;
+    margin-left:10%
+}
+
+.tb1 th{
+    border-bottom:1px solid gray;
+    padding-bottom:10px;
+    font-size:0.8rem;
+    color:gray
+}
+.tb1 td{
+    padding-top:4px
+}
+
+
+#setStockTb>tr>th:nth-child(3){width: 30px;text-align: center;}
+#setStockTb>tr>td>span{
+    display:none
+}
+#setStockTb>tr:hover>td>span{
+    display:block
+}
+
+.jsx_VAcordion>div>span{background-color:#fafafa}
+.jsx_VAcordion>div.sel>span{
+    background-color: rgb(255, 255, 174);
+}
+
+
+
+
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: sans-serif;
+    color: #333;
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f0f0f0;
+    font-weight: 600;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+   tr:hover {
+    background-color: #c8e5fc;
+  }
+
+tr {
+  border-bottom: 1px solid #eee;
+} 
+
+/* Opcional: Color de énfasis para encabezados */
+th {
+  background-color: #007bff;
+  color: white;
+} 
+
+/* Opcional: Efecto hover para filas */
+tr {
+  transition: background-color 0.3s ease;
+}

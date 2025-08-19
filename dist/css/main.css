@@ -1,0 +1,156 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    overscroll-behavior-x: none; /* Desactiva el desplazamiento horizontal */
+    overscroll-behavior-y: auto; /* Permite el desplazamiento vertical normal */
+  }
+.hide{display:none!important}
+.suave{
+    transition: all 0.3s ease-in-out; /* Animación de la propiedad left durante 0.3 segundos con una función de tiempo ease-in-out */
+}
+
+/*Para acordion vertical*/
+.jsx_VAcordion {
+    display:flex!important;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    min-width:100px;
+    min-height: 100px;
+} 
+.jsx_VAcordion>div {
+    display:block;
+    height: 30px; /* Altura fija para los divs */
+    border:1px solid silver;
+    transition:all 0.2s;
+    overflow:hidden;
+    padding-bottom:10px;
+}
+.jsx_VAcordion>div:first-child{
+    border-radius:6px 6px 0px 0px
+}
+.jsx_VAcordion>div:last-child{
+    border-radius:0px 0px 6px 6px
+}
+.jsx_VAcordion>div>span{
+    display:block;
+    padding:5px;
+    background-color: #f4f4f4;
+    cursor:pointer;
+    border-bottom:3px double silver
+}
+.jsx_VAcordion>div.sel>span{
+    font-weight: bold;
+    background-color: silver;
+}
+.jsx_VAcordion>div>div{
+    display:block;
+    height:calc(100% - 100px);
+    overflow: auto;
+}
+.jsx_VAcordion>div.sel {
+    height: auto;
+    flex-grow: 1; /* Este div ocupa el espacio restante */
+    border-left:4px solid black;
+    overflow:auto;
+}
+
+.jsx_VAcordion>div>div{
+    height:auto;
+}
+
+
+/** jsx_JSlider */
+div.jsx_JSlider{
+    position:relative;
+    min-width: 100px; /* Ancho fijo del contenedor principal */
+    min-height: 30px;
+    max-width:100vw;
+    height: auto; /* Alto fijo del contenedor principal */
+    
+    overflow: hidden; /* Oculta el contenido que se desborda */
+    border:1px solid silver;
+    user-select: none;
+}
+
+div.jsx_JSlider>div{
+    display:flex!important;
+    flex-direction: row!important;
+    min-height: 30px;
+    position:absolute;    
+    white-space: nowrap; /* Evita que los elementos se ajusten a varias líneas */
+}
+    
+div.jsx_JSlider>div>* {
+    vertical-align: top;
+    top:0px;
+    margin-right: 10px;
+    /*padding: 10px;*/
+    border:1px solid red;
+    text-align: center;
+    color:black;
+}
+
+.item{
+    padding:5px;
+    padding-left:20px;
+    border:1px solid white;
+    border-radius:5px
+}
+
+.item:hover{
+    border:1px solid silver
+}
+
+
+._kanban{
+    border:1px solid silver;
+    border-radius:5px;
+    display:flex;
+    flex-direction: row;
+    height:600px;
+    overflow: auto;
+    font-size: 0.8rem;
+}
+/*Columna*/
+._kanban>div{
+    width:100%;
+    height:100%;
+    border:1px solid #e0e0e0;
+    background-color: #Fafafa;
+}
+/*Titulo de columna*/
+._kanban>div>div:first-child{
+    color:gray;
+    padding:10px;
+    border-bottom:1px solid #e0e0e0;
+}
+/*contenido de la columna*/
+._kanban>div>div:last-child{
+    height:calc(100% - 40px);
+    overflow: auto;
+}
+/*Items de la columna*/
+._kdrag{
+    border:1px solid silver;
+    padding:5px;
+    min-height:90px;
+    margin:4px;
+    border-radius:5px;
+    background-color: white;
+    
+}
+div._kdrag.arrastrando{
+    border:1px solid red!important;
+    cursor:grabbing
+}
+
+
+
+/*JLogin*/
+
+._JLogin{
+    border:1px solid #dadada;
+    border-radius: 10px;
+    padding:10px;
+    background-color: #fafafa;
+}
